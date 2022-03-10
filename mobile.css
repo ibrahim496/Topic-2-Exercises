@@ -1,0 +1,83 @@
+
+
+body{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header"
+                          "nav nav nav"
+                          "main main main"
+                          "aside aside aside"
+                          "footer footer footer";
+
+
+                              
+}
+header{
+    background-color: rgb(71, 71, 204);
+    color: white;
+    padding: 20px;
+    grid-area: header;
+}
+
+
+nav{
+    display: none;
+background-color: yellow; 
+position: fixed;
+top: 0;
+left: 50%;
+width: 50%;
+    height: 100vh;
+}
+
+
+
+main{
+ 
+    background-color: blue;
+    color: white;
+     grid-area:main;
+
+}
+aside{
+    background-color: lightgreen;
+     grid-area:aside;
+
+}
+footer{
+    background-color: darkgreen;
+    color: white;
+     grid-area:footer;
+}
+     
+
+.shownav {
+height: 0.8em;
+    width: 1.25em;
+    display: block;
+    border-top: 0.2em solid orange;
+    border-bottom: 0.2em solid orange;
+   border-radius: 0.1em;
+}
+ .shownav:before { 
+     content: '';
+    position: absolute;
+    width: 1.25em;
+    margin-top: 0.3em;
+   
+    border-top: 0.2em solid green;
+}
+ #clicked .shownav {display: block;}
+#clicked .nav {display: none}
+
+#clicked:target .shownav{display: none;}
+#clicked:target nav{display:block;}
+
+.hidenav{display:none;}
+#clicked:target .hidenav{display:block;}
+
+
+
+
+
